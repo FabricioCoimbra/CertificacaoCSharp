@@ -7,7 +7,7 @@ namespace Tipos
     {
         public void Executar()
         {
-            int idade = 15; //idade = 15.5;
+            //int idade = 15; //idade = 15.5;
 
             char resposta = 'S';// System.Char
 
