@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CriarTipos
 {
-    class MenuItem
+    internal class MenuItem
     {
         public MenuItem(string titulo, Type tipoClasse)
         {
@@ -12,7 +10,7 @@ namespace CriarTipos
             TipoClasse = tipoClasse;
         }
 
-        public string Titulo { get; set; }
-        public Type TipoClasse { get; set; }
+        public string Titulo { get; internal set; }
+        public Type TipoClasse { get; internal set; }
     }
 }
