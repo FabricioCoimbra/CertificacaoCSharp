@@ -1,6 +1,6 @@
 ﻿namespace CriarTipos
 {
-    internal interface IAulaItem
+        internal interface IAulaItem
     {
         void Executar();
     }

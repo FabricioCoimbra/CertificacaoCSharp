@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Tipos;
 
 namespace CriarTipos
 {
@@ -63,8 +64,8 @@ namespace CriarTipos
         {
             return new List<MenuItem>
             {
-                //new MenuItem("Tipos de Valor", typeof(TiposDeValor)),
-                //new MenuItem("Tipos Inteiros", typeof(TiposInteiros)),
+                new MenuItem("Tipos de Valor", typeof(TiposDeValor)),
+                new MenuItem("Tipos Inteiros", typeof(TiposInteiros))
                 //new MenuItem("Ponto Flututante", typeof(PontoFlutuante)),
                 //new MenuItem("Decimal", typeof(Decimal)),
                 //new MenuItem("Booleanos", typeof(Booleanos)),
