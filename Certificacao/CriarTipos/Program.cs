@@ -67,8 +67,8 @@ namespace CriarTipos
                 new MenuItem("Tipos de Valor", typeof(TiposDeValor)),
                 new MenuItem("Tipos Inteiros", typeof(TiposInteiros)),
                 new MenuItem("Ponto Flututante", typeof(TiposFlutuantes)),
-                new MenuItem("Decimal", typeof(Decimais))
-                //new MenuItem("Booleanos", typeof(Booleanos)),
+                new MenuItem("Decimal", typeof(TiposDecimais)),
+                new MenuItem("Booleanos", typeof(TiposBooleanos))
                 //new MenuItem("Estruturas", typeof(Estruturas)),
                 //new MenuItem("Enumeracoes", typeof(Enumeracoes)),
                 //new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia)),

@@ -2,7 +2,7 @@
 
 namespace CriarTipos.Tipos
 {
-    class Decimais : IAulaItem
+    class TiposDecimais : IAulaItem
     {   
         public void Executar()
         {
