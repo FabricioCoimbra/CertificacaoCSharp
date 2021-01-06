@@ -71,7 +71,7 @@ namespace CriarTipos
                 new MenuItem("Booleanos", typeof(TiposBooleanos)),
                 new MenuItem("Estruturas", typeof(Estruturas)),
                 new MenuItem("Enumeracoes", typeof(TiposEnumeracoes)),
-                //new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia)),
+                new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia)),
                 //new MenuItem("Classes", typeof(Classes)),
                 //new MenuItem("Interfaces", typeof(Interfaces)),
                 //new MenuItem("Delegates", typeof(Delegates)),
