@@ -1,7 +1,6 @@
 using System;
-using CriarTipos;
 
-namespace Tipos
+namespace CriarTipos.Tipos
 {
     class TiposFlutuantes : IAulaItem
     {
