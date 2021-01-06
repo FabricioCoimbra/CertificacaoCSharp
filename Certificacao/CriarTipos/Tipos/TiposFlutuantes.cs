@@ -37,7 +37,24 @@ namespace Tipos
             float z = 4.5f;
             var resultado2 = (x * y) / z;
             Console.WriteLine("x * y= (0)", resultado2);
-            Console.WriteLine($"O resultado é do tipo:  {resultado2.GetType()}");
+            Console.WriteLine($"O resultado2 é do tipo:  {resultado2.GetType()}");
+            Console.WriteLine($"O z é do tipo:  {z.GetType()}");
+
+            double a = 4.5;
+            var b = 8.2;
+            var resultado3 = x / y;
+            Console.WriteLine("x / y= (0)", resultado3);
+            Console.WriteLine($"O resultado3 é do tipo:  {resultado3.GetType()}");
+            Console.WriteLine($"O a é do tipo:  {a.GetType()}");
+            Console.WriteLine($"O b é do tipo:  {b.GetType()}");
+
+            var resultado4 = (a / b);
+            Console.WriteLine($"O resultado4 é do tipo:  {resultado4.GetType()}");
+            var resultado5 = (a * b);
+            Console.WriteLine($"O resultado5 é do tipo:  {resultado5.GetType()}");
+
+            var resultado6 = (x * z);
+            Console.WriteLine($"O resultado6 é do tipo:  {resultado6.GetType()}");
         }
 
     }
