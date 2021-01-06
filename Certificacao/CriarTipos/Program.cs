@@ -72,7 +72,7 @@ namespace CriarTipos
                 new MenuItem("Estruturas", typeof(Estruturas)),
                 new MenuItem("Enumeracoes", typeof(TiposEnumeracoes)),
                 new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia)),
-                //new MenuItem("Classes", typeof(Classes)),
+                new MenuItem("Classes", typeof(TiposClasses)),
                 //new MenuItem("Interfaces", typeof(Interfaces)),
                 //new MenuItem("Delegates", typeof(Delegates)),
                 //new MenuItem("Objetos", typeof(Objetos)),
