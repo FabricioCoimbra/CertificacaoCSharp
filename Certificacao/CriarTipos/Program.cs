@@ -77,7 +77,7 @@ namespace CriarTipos
                 new MenuItem("Delegates", typeof(Delegates)),
                 new MenuItem("Objetos", typeof(Objetos)),
                 new MenuItem("Dinâmicos", typeof(Dinamicos)),
-                //new MenuItem("Strings", typeof(Strings)),
+                new MenuItem("Strings", typeof(TiposStrings)),
                 //new MenuItem("Metodos", typeof(Metodos)),
                 //new MenuItem("Parâmetros Nomeados", typeof(ParametrosNomeados)),
                 //new MenuItem("Parâmetros Opcionais", typeof(ParametrosOpcionais)),
