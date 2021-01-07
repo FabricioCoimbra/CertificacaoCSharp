@@ -75,7 +75,7 @@ namespace CriarTipos
                 new MenuItem("Classes", typeof(TiposClasses)),
                 new MenuItem("Interfaces", typeof(TipoInterfaces)),
                 new MenuItem("Delegates", typeof(Delegates)),
-                //new MenuItem("Objetos", typeof(Objetos)),
+                new MenuItem("Objetos", typeof(Objetos)),
                 //new MenuItem("Dinâmicos", typeof(Dinamicos)),
                 //new MenuItem("Strings", typeof(Strings)),
                 //new MenuItem("Metodos", typeof(Metodos)),
