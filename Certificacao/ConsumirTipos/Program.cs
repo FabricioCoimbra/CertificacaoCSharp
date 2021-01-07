@@ -66,7 +66,7 @@ namespace ConsumirTipos
             {                
                 new MenuItem("Boxing e Unboxing", typeof(Boxing)),
                 new MenuItem("Conversoes Implícitas", typeof(ConversoesImplicitas)),
-                //new MenuItem("Conversoes Explícitas", typeof(ConversoesExplicitas)),
+                new MenuItem("Conversoes Explícitas", typeof(ConversoesExplicitas)),
                 //new MenuItem("Operadores IS e AS", typeof(OperadoresISeAS)),
                 //new MenuItem("Operadores de Conversão", typeof(OperadoresDeConversao)),
                 //new MenuItem("Métodos Auxiliares de Conversão", typeof(MetodosAuxiliares)),
