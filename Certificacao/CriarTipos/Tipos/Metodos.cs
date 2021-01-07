@@ -11,7 +11,7 @@ namespace CriarTipos.Tipos
             // public irestrito
             // proteced para os descendentes.
 
-            Retangulo retangulo = new Retangulo(12, 10);
+            Retangulo retangulo = new Retangulo(altura: 12, largura: 10);
             Console.WriteLine("retangulo.GetArea() " + retangulo.Area);
 
             Retangulo outroRetangulo = new Retangulo(10, 10);
