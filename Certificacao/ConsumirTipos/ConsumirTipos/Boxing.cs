@@ -1,5 +1,4 @@
 ﻿using System;
-using CriarTipos;
 
 namespace ConsumirTipos.ConsumirTipos
 {

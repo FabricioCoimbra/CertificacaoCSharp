@@ -1,4 +1,4 @@
-﻿namespace CriarTipos
+﻿namespace ConsumirTipos
 {
         internal interface IAulaItem
     {

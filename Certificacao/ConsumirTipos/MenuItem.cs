@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CriarTipos
+namespace ConsumirTipos
 {
     internal class MenuItem
     {

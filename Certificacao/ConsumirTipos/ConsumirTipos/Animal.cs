@@ -1,33 +1,17 @@
 ﻿using System;
 
-namespace CriarTipos.Tipos
+namespace ConsumirTipos.ConsumirTipos
 {
-    class MetodosSubstituidos : IAulaItem
+    public interface IAnimal
     {
-        public void Executar()
-        {
-            Animal gato = new Gato() { Nome = "Bichano" };
-            gato.Beber();
-            gato.Comer();
-            gato.Andar();
+        string Nome { get; set; }
 
-            Gato gato2 = new Gato() { Nome = "Bichano 2" };
-            gato2.Beber();
-            gato2.Comer();
-            gato2.Andar();
-
-            //https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/new-modifier
-            Console.WriteLine("Campos sobrescritos e classes aninhadas");
-            // Criação de um objeto da classe sobrescrita:
-            DerivedC.NestedC c1 = new DerivedC.NestedC(); 
-            // Criar um objeto da classe base:
-            BaseC.NestedC c2 = new BaseC.NestedC();
-
-            Console.WriteLine(c1.x);
-            Console.WriteLine(c2.x);
-        }
+        void Andar();
+        void Beber();
+        void Comer();
     }
-    class Animal
+
+    public class Animal : IAnimal
     {
         public String Nome { get; set; }
         public virtual void Beber()
@@ -44,7 +28,7 @@ namespace CriarTipos.Tipos
         }
     }
 
-    class Gato : Animal
+    public class Gato : Animal, IAnimal
     {
         public override void Beber()
         {
