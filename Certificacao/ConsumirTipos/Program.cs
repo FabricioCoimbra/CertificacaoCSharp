@@ -70,8 +70,8 @@ namespace ConsumirTipos
                 new MenuItem("Operadores IS e AS", typeof(OperadoresISeAS)),
                 new MenuItem("Operadores de Conversão", typeof(OperadoresDeConversao)),
                 new MenuItem("Métodos Auxiliares de Conversão", typeof(MetodosAuxiliares)),
-                //new MenuItem("Usando Dynamic", typeof(UsandoDynamic)),
-                //new MenuItem("Conversões de Dynamic", typeof(ConversoesDeDynamic)),
+                new MenuItem("Usando Dynamic", typeof(UsandoDynamic)),
+                new MenuItem("Conversões de Dynamic", typeof(ConversoesDeDynamic)),
                 //new MenuItem("Resolucão de Sobrecarga", typeof(ResolucaoSobrecarga)),
                 //new MenuItem("Usando ExpandObject", typeof(UsandoExpandObject)),
                 //new MenuItem("Interoperabilidade COM", typeof(InteropCOM))                
