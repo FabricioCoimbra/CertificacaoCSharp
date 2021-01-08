@@ -74,7 +74,7 @@ namespace ConsumirTipos
                 new MenuItem("Conversões de Dynamic", typeof(ConversoesDeDynamic)),
                 new MenuItem("Resolucão de Sobrecarga", typeof(ResolucaoSobrecarga)),
                 new MenuItem("Usando ExpandObject", typeof(UsandoExpandObject)),
-                //new MenuItem("Interoperabilidade COM", typeof(InteropCOM))                
+                new MenuItem("Interoperabilidade COM", typeof(InteropCOM))                
             };
         }
     }
