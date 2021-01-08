@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ConsumirTipos.ConsumirTipos
 {
@@ -29,6 +27,9 @@ namespace ConsumirTipos.ConsumirTipos
             double resultadodouble = (double)Somar(double1, double2);
             obj = Somar(double1, double2);
             Console.WriteLine($"resultado double: {resultadodouble}, {obj}");
+            Console.WriteLine();
+
+            Console.WriteLine($"Somar('ABc', 'xyz'): {Somar("ABc", "xyz")}");
         }
 
         int Somar(int parcela1, int parcela2)
@@ -43,10 +44,18 @@ namespace ConsumirTipos.ConsumirTipos
         //    return (short)(parcela1 + parcela2);
         //}
 
-        object Somar(object parcela1, object parcela2)
+        //object Somar(object parcela1, object parcela2)
+        //{
+        //    Console.WriteLine("object Somar(object parcela1, object parcela2)");
+        //    return (double)parcela1 + (double)parcela2;
+        //}
+
+        //dynamic causa o mesmo efeito do object porém não precisa o cast na soma 
+        //e não permite a sobrecarga pois o compilador considera ambos como object durante a compilação e não conseguiria resolver a sobrecarga
+        dynamic Somar(dynamic parcela1, dynamic parcela2)
         {
-            Console.WriteLine("object Somar(object parcela1, object parcela2)");
-            return (double)parcela1 + (double)parcela2;
+            Console.WriteLine("dynamic Somar(object parcela1, object parcela2)");
+            return parcela1 + parcela2;
         }
     }
 }
