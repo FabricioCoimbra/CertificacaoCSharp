@@ -7,45 +7,17 @@ namespace AplicarEncapsulamento
     {
         static void Main(string[] args)
         {
-            Funcionario funcionario = new Funcionario(1000);
-            Console.WriteLine(funcionario.Salario);
-            //funcionario.Salario = -1000;
-            //Console.WriteLine(funcionario.Salario);
+            Funcionario funcionario = CriaFuncionario();
 
-            funcionario = new Funcionario(1500);
-            funcionario.CPF = "123.456.789-00";
-            funcionario.Nome = "josé da silva";
-            funcionario.DataNascimento = new DateTime(2000, 1, 1);
-
-            ((IFuncionario)funcionario).CargaHorariaMensal = 168;
-            ((IPlantonista)funcionario).CargaHorariaMensal = 32;
-            funcionario.EfeturarPagamento();
-            funcionario.CrachaGerado += (s, e) =>
-            {
-                Console.WriteLine("Crachá gerado");
-            };
-            ((IFuncionario)funcionario).GerarCracha();
-            ((IPlantonista)funcionario).GerarCracha();
-
-            Cliente cliente = new Cliente
-            {
-                CPF = "789.456.123-99",
-                DataNascimento = new DateTime(1980, 1, 1),
-                Nome = "Maria de Souza",
-                DataUltimaCompra = new DateTime(2018, 1, 1),
-                ValorUltimaCompra = 200
-            };
-
-            Console.WriteLine(cliente);
-
-            Pessoa pessoa = new Cliente
-            {
-                CPF = "789.456.123-99",
-                DataNascimento = new DateTime(1980, 1, 1),
-                Nome = "Maria de Souza"
-            };
+            ImplementacaoExplicitaDeInterface(funcionario);
+            Pessoa pessoa = ClasseBaseAbstractESealed();
 
             Console.WriteLine(pessoa);
+            ComparacaoDeObjetos();
+        }
+
+        private static void ComparacaoDeObjetos()
+        {
             Aluno aluno1 = new Aluno
             {
                 Nome = "José da Silva",
@@ -94,6 +66,55 @@ namespace AplicarEncapsulamento
             {
                 Console.WriteLine(aluno);
             }
+        }
+
+        private static Pessoa ClasseBaseAbstractESealed()
+        {
+            Cliente cliente = new Cliente
+            {
+                CPF = "789.456.123-99",
+                DataNascimento = new DateTime(1980, 1, 1),
+                Nome = "Maria de Souza",
+                DataUltimaCompra = new DateTime(2018, 1, 1),
+                ValorUltimaCompra = 200
+            };
+
+            Console.WriteLine(cliente);
+
+            Pessoa pessoa = new Cliente
+            {
+                CPF = "789.456.123-99",
+                DataNascimento = new DateTime(1980, 1, 1),
+                Nome = "Maria de Souza"
+            };
+            return pessoa;
+        }
+
+        private static void ImplementacaoExplicitaDeInterface(Funcionario funcionario)
+        {
+            ((IFuncionario)funcionario).CargaHorariaMensal = 168;
+            ((IPlantonista)funcionario).CargaHorariaMensal = 32;
+            funcionario.EfeturarPagamento();
+            funcionario.CrachaGerado += (s, e) =>
+            {
+                Console.WriteLine("Crachá gerado");
+            };
+            ((IFuncionario)funcionario).GerarCracha();
+            ((IPlantonista)funcionario).GerarCracha();
+        }
+
+        private static Funcionario CriaFuncionario()
+        {
+            Funcionario funcionario = new Funcionario(1000);
+            Console.WriteLine(funcionario.Salario);
+            //funcionario.Salario = -1000;
+            //Console.WriteLine(funcionario.Salario);
+
+            funcionario = new Funcionario(1500);
+            funcionario.CPF = "123.456.789-00";
+            funcionario.Nome = "josé da silva";
+            funcionario.DataNascimento = new DateTime(2000, 1, 1);
+            return funcionario;
         }
     }
 }
