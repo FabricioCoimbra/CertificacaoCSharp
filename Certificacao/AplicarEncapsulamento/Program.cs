@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AplicarEncapsulamento
 {
@@ -45,6 +46,54 @@ namespace AplicarEncapsulamento
             };
 
             Console.WriteLine(pessoa);
+            Aluno aluno1 = new Aluno
+            {
+                Nome = "José da Silva",
+                DataNascimento = new DateTime(1990, 1, 1)
+            };
+
+            Aluno aluno2 = new Aluno
+            {
+                Nome = "José da Silva",
+                DataNascimento = new DateTime(1995, 1, 1)
+            };
+
+            Aluno aluno3 = new Aluno
+            {
+                Nome = "josé da silva",
+                DataNascimento = new DateTime(1990, 1, 1)
+            };
+
+            Console.WriteLine(aluno1.Equals(aluno2));
+            Console.WriteLine(aluno1.Equals(aluno3));
+
+            Aluno aluno4 = new Aluno
+            {
+                Nome = "ANDRÉ DOS SANTOS",
+                DataNascimento = new DateTime(1970, 1, 1)
+            };
+
+            Aluno aluno5 = new Aluno
+            {
+                Nome = "Ana de Souza",
+                DataNascimento = new DateTime(1990, 1, 1)
+            };
+
+            List<Aluno> alunos = new List<Aluno>
+            {
+                aluno1,
+                aluno2,
+                aluno3,
+                aluno4,
+                aluno5
+            };
+
+            alunos.Sort();
+
+            foreach (var aluno in alunos)
+            {
+                Console.WriteLine(aluno);
+            }
         }
     }
 }
