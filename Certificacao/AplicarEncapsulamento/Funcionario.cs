@@ -2,7 +2,7 @@
 
 namespace AplicarEncapsulamento
 {
-    class Funcionario : IFuncionario, IPlantonista
+    class Funcionario : Pessoa, IFuncionario, IPlantonista
     {
         private decimal salario;
         public decimal Salario
@@ -17,9 +17,6 @@ namespace AplicarEncapsulamento
                 salario = value;
             }
         }
-        public string CPF { get; set; }
-        public string Nome { get; set; }
-        public DateTime DataNascimento { get; set; }
         public int CargaHorariaMensal { get; set; }
 
         public event EventHandler CrachaGerado;
