@@ -30,7 +30,6 @@ namespace ControleDeFluxo
             emprestimo.OnPrazoMaximoEstourado += (object source, EventArgs e) => Console.WriteLine("Prazo máximo excedido");
             emprestimo.Prazo = 11;
         }
-
         private static void SaquesValidados()
         {
             ContaBancaria conta = new ContaBancaria(100);

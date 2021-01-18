@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ControleDeFluxo
 {
@@ -6,6 +7,8 @@ namespace ControleDeFluxo
     {
         private int prazo;
         private const int PRAZO_MAXIMO_PAGAMENTO_ANOS = 5;
+        private const string ARQUIVO_LOG_TESTE = @"\log\logs.txt";
+        private const string ARQUIVO_LOG_PRODUCAO = @"\\\\10.1.2.179\\monitoramento\\logs.txt";
         public Emprestimo(string codigoContrato)
         {
             if (!ValidarCodigo(codigoContrato))
@@ -55,9 +58,24 @@ namespace ControleDeFluxo
                     return;
                 }
                 prazo = value;
-                Console.WriteLine($"novo prazo: {prazo}");
+                GravarLog($"novo prazo: {prazo}");                
             }
-        }        
+        }
+
+        public void GravarLog(string mensagem)
+        {
+            String arquivo = "";
+#if (DEBUG)
+            arquivo = ARQUIVO_LOG_TESTE;
+            Console.WriteLine(Path.GetFullPath(arquivo));
+#else
+            arquivo = ARQUIVO_LOG_PRODUCAO;
+#endif
+            Directory.CreateDirectory(Path.GetDirectoryName(arquivo));
+            using var writer = new StreamWriter(arquivo, append: true);
+            writer.WriteLine(mensagem);
+            Console.WriteLine(mensagem);
+        }
     }
 
 }
