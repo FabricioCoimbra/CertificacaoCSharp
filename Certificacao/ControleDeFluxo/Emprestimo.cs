@@ -58,7 +58,13 @@ namespace ControleDeFluxo
                     return;
                 }
                 prazo = value;
-                GravarLog($"novo prazo: {prazo}");                
+
+#if ADDLOG
+    GravarLog($"novo prazo: {prazo}");
+#elif TESTE
+    Console.WriteLine(mensagem);
+#endif
+
             }
         }
 
