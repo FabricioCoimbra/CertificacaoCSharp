@@ -6,7 +6,9 @@ namespace StringsAndLifeCicle
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var pilha = new PilhaDeChamadas();
+            pilha.Executar();
+
         }
     }
 }
