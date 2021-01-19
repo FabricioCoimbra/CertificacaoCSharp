@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace StringsAndLifeCicle
@@ -12,11 +13,12 @@ namespace StringsAndLifeCicle
             GerarTiposValor();
 
             await Espera10Segundos();
+            GC.Collect();
 
             GerarTiposReferencia();
         }
 
-        private static async Task Espera10Segundos()
+        private async Task Espera10Segundos()
         {
             await Task.Delay(10000);
         }
@@ -34,7 +36,7 @@ namespace StringsAndLifeCicle
             Console.WriteLine("tipos de calor finalizados");
         }
 
-        private static void GerarTiposReferencia()
+        private void GerarTiposReferencia()
         {
             Console.WriteLine("Inciando tipos de referência");
             for (long i = 0; i < 100000; i++)
